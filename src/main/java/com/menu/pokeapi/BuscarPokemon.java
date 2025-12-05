@@ -1,5 +1,7 @@
 package com.menu.pokeapi;
 
+import javax.swing.JTextField;
+
 public class BuscarPokemon extends javax.swing.JFrame {
     private ResultadosDeBusquedaPokemon ventanaResultado;
     private TablaDePokemones ventanaLista;
@@ -14,9 +16,22 @@ public class BuscarPokemon extends javax.swing.JFrame {
     public BuscarPokemon() {
         initComponents();
         ventanaResultado = new ResultadosDeBusquedaPokemon();
+        ventanaResultado.setVentanaBuscador(this); // <-- ¡Llamada agregada!
         ventanaLista = new TablaDePokemones();
+        ventanaLista.setVentanaBuscador(this);
     }
-
+    
+    
+    public void mostrarFrame() {
+        ventanaLista.setVisible(true);
+    }
+    public void mostrarBuscador() {
+        this.setVisible(true); 
+    }
+    public JTextField getTxtBuscador() {
+        return txtBuscador;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -105,7 +120,7 @@ public class BuscarPokemon extends javax.swing.JFrame {
     );
 
     ventanaResultado.setVisible(true);
-    ventanaLista.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

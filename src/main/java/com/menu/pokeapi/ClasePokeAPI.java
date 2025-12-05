@@ -16,7 +16,6 @@ import org.json.JSONObject;
 
 public class ClasePokeAPI {
      private Set<Pokemon> listaPokemones = new HashSet<>();
-
     
     public void MostrarPokemon(JTable tablaPokemon, JTextField buscador,JTextField nombre, JTextField peso, JTextField altura,JTextField experienciaBase, JLabel foto){
      DefaultTableModel modelo = new  DefaultTableModel();

@@ -3,6 +3,8 @@ com\menu\pokeapi\BuscarPokemon.class
 com\menu\pokeapi\BuscarPokemon$2.class
 com\menu\pokeapi\ResultadosDeBusquedaPokemon.class
 com\menu\pokeapi\Pokemon.class
+com\menu\pokeapi\ResultadosDeBusquedaPokemon$1.class
 com\menu\pokeapi\ClasePokeAPI.class
 com\menu\pokeapi\MainPokeapi.class
+com\menu\pokeapi\TablaDePokemones$1.class
 com\menu\pokeapi\BuscarPokemon$1.class
