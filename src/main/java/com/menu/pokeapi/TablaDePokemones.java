@@ -8,15 +8,11 @@ public class TablaDePokemones extends javax.swing.JFrame {
     /**
      * Creates new form ListaPokemones
      */
-    public TablaDePokemones(BuscarPokemon buscador) {
-        initComponents();
+    public void setVentanaBuscador(BuscarPokemon buscador) {
         this.ventanaBuscador = buscador;
     }
     public TablaDePokemones() {
         initComponents();
-    }
-    public void setVentanaBuscador(BuscarPokemon buscador) {
-        this.ventanaBuscador = buscador;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -30,7 +26,7 @@ public class TablaDePokemones extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        btnvolver = new javax.swing.JButton();
+        BtnVolverAlBuscador = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,11 +50,11 @@ public class TablaDePokemones extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        btnvolver.setForeground(new java.awt.Color(51, 51, 255));
-        btnvolver.setText("Volver a Buscar");
-        btnvolver.addActionListener(new java.awt.event.ActionListener() {
+        BtnVolverAlBuscador.setForeground(new java.awt.Color(51, 102, 255));
+        BtnVolverAlBuscador.setText("Volver al buscador");
+        BtnVolverAlBuscador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnvolverActionPerformed(evt);
+                BtnVolverAlBuscadorActionPerformed(evt);
             }
         });
 
@@ -68,22 +64,21 @@ public class TablaDePokemones extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(17, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(150, 150, 150))))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(BtnVolverAlBuscador, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
-                .addComponent(btnvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
+                .addComponent(BtnVolverAlBuscador, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -106,12 +101,12 @@ public class TablaDePokemones extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnvolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvolverActionPerformed
+    private void BtnVolverAlBuscadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVolverAlBuscadorActionPerformed
         if (ventanaBuscador != null) {
-            ventanaBuscador.mostrarBuscador();
+            ventanaBuscador.setVisible(true);
+            this.dispose();
         }
-        this.dispose();
-    }//GEN-LAST:event_btnvolverActionPerformed
+    }//GEN-LAST:event_BtnVolverAlBuscadorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,7 +134,7 @@ public class TablaDePokemones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnvolver;
+    private javax.swing.JButton BtnVolverAlBuscador;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;

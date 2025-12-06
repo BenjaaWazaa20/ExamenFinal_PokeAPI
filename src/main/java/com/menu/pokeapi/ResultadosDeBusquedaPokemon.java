@@ -2,17 +2,13 @@ package com.menu.pokeapi;
 public class ResultadosDeBusquedaPokemon extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(ResultadosDeBusquedaPokemon.class.getName());
-    private BuscarPokemon ventanaBuscador; 
-    private BuscarPokemon vent = new BuscarPokemon();
+    private BuscarPokemon ventanaBuscador;
     /**
      * Creates new form FrmResultadoPokemon
      */
     public ResultadosDeBusquedaPokemon() {
         initComponents();
         
-    }
-    public void mostrarFrame2() {
-        vent.setVisible(true);
     }
     public void setVentanaBuscador(BuscarPokemon buscador) {
         this.ventanaBuscador = buscador;
@@ -45,10 +41,13 @@ public class ResultadosDeBusquedaPokemon extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Resultados de Busqueda", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(51, 51, 255))); // NOI18N
         jPanel1.setForeground(new java.awt.Color(255, 153, 0));
 
+        txtPeso.setEditable(false);
         txtPeso.setText("Peso");
 
+        txtAltura.setEditable(false);
         txtAltura.setText("Altura");
 
+        txtExperiencia.setEditable(false);
         txtExperiencia.setText("Experiencia");
 
         Jlbfoto.setText("Foto");
@@ -65,6 +64,7 @@ public class ResultadosDeBusquedaPokemon extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(51, 102, 255));
         jLabel4.setText("Experiencia Base:");
 
+        txtNombre.setEditable(false);
         txtNombre.setText("Nombre");
 
         BtnLista.setForeground(new java.awt.Color(51, 51, 255));
@@ -101,8 +101,8 @@ public class ResultadosDeBusquedaPokemon extends javax.swing.JFrame {
                         .addComponent(Jlbfoto, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(28, 28, 28))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(BtnLista, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(239, 239, 239))))
+                        .addComponent(BtnLista, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(204, 204, 204))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,7 +155,7 @@ public class ResultadosDeBusquedaPokemon extends javax.swing.JFrame {
 
     private void BtnListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnListaActionPerformed
         if (ventanaBuscador != null) {
-            ventanaBuscador.mostrarBuscador();
+            ventanaBuscador.mostrarFrame();
         }
         this.dispose(); 
     }//GEN-LAST:event_BtnListaActionPerformed

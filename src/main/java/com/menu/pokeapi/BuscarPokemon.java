@@ -25,13 +25,6 @@ public class BuscarPokemon extends javax.swing.JFrame {
     public void mostrarFrame() {
         ventanaLista.setVisible(true);
     }
-    public void mostrarBuscador() {
-        this.setVisible(true); 
-    }
-    public JTextField getTxtBuscador() {
-        return txtBuscador;
-    }
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
